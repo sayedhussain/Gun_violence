@@ -1,0 +1,193 @@
+#@begin Parallel_OR #@desc Parallel OpenRefine Workflow
+#@param expression:value.toString()
+#@param expression:value.trim()
+#@param expression:value.toNumber()
+#@param expression:value.toLowercase()
+#@param expression:value.replace("(county)","county")
+#@param expression:value
+#@in sources
+#@in gun_type
+#@in location_description
+#@in congressional_district
+#@in city_or_county_3
+#@in incident_url
+#@in participant_name
+#@in incident_id
+#@in gun_stolen
+#@in participant_relationship
+#@in n_injured
+#@in city_or_county_4
+#@in n_killed
+#@in city_or_county_2
+#@in state
+#@in state_3
+#@in city_or_county_5
+#@in notes
+#@in city_or_county
+#@in state_senate_district
+#@in state_1
+#@in state_house_district
+#@in incident_url_fields_missing
+#@in city_or_county_1
+#@in source_url
+#@in state_2
+#@in address
+#@out CleanData
+#@begin core/text-transform0 #@desc Text transform on cells in column incident_id using expression value.toString()
+#@param expression:value.toString()
+#@in incident_id
+#@out incident_id_1
+#@end core/text-transform0
+#@begin core/text-transform1 #@desc Text transform on cells in column state using expression value.trim()
+#@param expression:value.trim()
+#@in state
+#@out state_1
+#@end core/text-transform1
+#@begin core/text-transform2 #@desc Text transform on cells in column city_or_county using expression value.trim()
+#@param expression:value.trim()
+#@in city_or_county
+#@out city_or_county_1
+#@end core/text-transform2
+#@begin core/column-removal3 #@desc Remove column address
+#@in address
+#@out remove-address
+#@end core/column-removal3
+#@begin core/text-transform4 #@desc Text transform on cells in column n_killed using expression value.toNumber()
+#@param expression:value.toNumber()
+#@in n_killed
+#@out n_killed_1
+#@end core/text-transform4
+#@begin core/text-transform5 #@desc Text transform on cells in column n_injured using expression value.toNumber()
+#@param expression:value.toNumber()
+#@in n_injured
+#@out n_injured_1
+#@end core/text-transform5
+#@begin core/column-removal6 #@desc Remove column incident_url
+#@in incident_url
+#@out remove-incident_url
+#@end core/column-removal6
+#@begin core/column-removal7 #@desc Remove column source_url
+#@in source_url
+#@out remove-source_url
+#@end core/column-removal7
+#@begin core/column-removal8 #@desc Remove column incident_url_fields_missing
+#@in incident_url_fields_missing
+#@out remove-incident_url_fields_missing
+#@end core/column-removal8
+#@begin core/text-transform9 #@desc Text transform on cells in column congressional_district using expression value.toString()
+#@param expression:value.toString()
+#@in congressional_district
+#@out congressional_district_1
+#@end core/text-transform9
+#@begin core/text-transform10 #@desc Text transform on cells in column gun_stolen using expression value.trim()
+#@param expression:value.trim()
+#@in gun_stolen
+#@out gun_stolen_1
+#@end core/text-transform10
+#@begin core/text-transform11 #@desc Text transform on cells in column gun_type using expression value.trim()
+#@param expression:value.trim()
+#@in gun_type
+#@out gun_type_1
+#@end core/text-transform11
+#@begin core/column-removal12 #@desc Remove column location_description
+#@in location_description
+#@out remove-location_description
+#@end core/column-removal12
+#@begin core/column-removal13 #@desc Remove column notes
+#@in notes
+#@out remove-notes
+#@end core/column-removal13
+#@begin core/column-removal14 #@desc Remove column participant_relationship
+#@in participant_relationship
+#@out remove-participant_relationship
+#@end core/column-removal14
+#@begin core/column-removal15 #@desc Remove column participant_name
+#@in participant_name
+#@out remove-participant_name
+#@end core/column-removal15
+#@begin core/column-removal16 #@desc Remove column sources
+#@in sources
+#@out remove-sources
+#@end core/column-removal16
+#@begin core/text-transform17 #@desc Text transform on cells in column state_house_district using expression value.toString()
+#@param expression:value.toString()
+#@in state_house_district
+#@out state_house_district_1
+#@end core/text-transform17
+#@begin core/text-transform18 #@desc Text transform on cells in column state_senate_district using expression value.toString()
+#@param expression:value.toString()
+#@in state_senate_district
+#@out state_senate_district_1
+#@end core/text-transform18
+#@begin core/text-transform19 #@desc Text transform on cells in column state using expression value.toLowercase()
+#@param expression:value.toLowercase()
+#@in state_1
+#@out state_2
+#@end core/text-transform19
+#@begin core/text-transform20 #@desc Text transform on cells in column city_or_county using expression value.toLowercase()
+#@param expression:value.toLowercase()
+#@in city_or_county_1
+#@out city_or_county_2
+#@end core/text-transform20
+#@begin core/mass-edit21 #@desc Mass edit cells in column state
+#@param expression:value
+#@in state_2
+#@out state_3
+#@end core/mass-edit21
+#@begin core/mass-edit22 #@desc Mass edit cells in column state
+#@param expression:value
+#@in state_3
+#@out state_4
+#@end core/mass-edit22
+#@begin core/text-transform23 #@desc Text transform on cells in column city_or_county using expression value.replace(\"(county)\",\"county\")
+#@param expression:value.replace("(county)","county")
+#@in city_or_county_2
+#@out city_or_county_3
+#@end core/text-transform23
+#@begin core/mass-edit24 #@desc Mass edit cells in column city_or_county
+#@param expression:value
+#@in city_or_county_3
+#@out city_or_county_4
+#@end core/mass-edit24
+#@begin core/mass-edit25 #@desc Mass edit cells in column city_or_county
+#@param expression:value
+#@in city_or_county_4
+#@out city_or_county_5
+#@end core/mass-edit25
+#@begin core/mass-edit26 #@desc Mass edit cells in column city_or_county
+#@param expression:value
+#@in city_or_county_5
+#@out city_or_county_6
+#@end core/mass-edit26
+#@begin CombineDataCleaningChanges
+#@in incident_id_1
+#@in state_4
+#@in city_or_county_6
+#@in address
+#@in remove-address
+#@in n_killed_1
+#@in n_injured_1
+#@in incident_url
+#@in remove-incident_url
+#@in source_url
+#@in remove-source_url
+#@in incident_url_fields_missing
+#@in remove-incident_url_fields_missing
+#@in congressional_district_1
+#@in gun_stolen_1
+#@in gun_type_1
+#@in location_description
+#@in remove-location_description
+#@in notes
+#@in remove-notes
+#@in participant_relationship
+#@in remove-participant_relationship
+#@in participant_name
+#@in remove-participant_name
+#@in sources
+#@in remove-sources
+#@in state_house_district_1
+#@in state_senate_district_1
+#@out CleanData
+#@end CombineDataCleaningChanges
+#@end Parallel_OR

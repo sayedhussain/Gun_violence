@@ -1,0 +1,1871 @@
+[
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column incident_id using expression value.toString()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "incident_id",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column state using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "state",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column city_or_county using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "city_or_county",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column address",
+    "columnName": "address"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column n_killed using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "n_killed",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column n_injured using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "n_injured",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column incident_url",
+    "columnName": "incident_url"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column source_url",
+    "columnName": "source_url"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column incident_url_fields_missing",
+    "columnName": "incident_url_fields_missing"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column congressional_district using expression value.toString()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "congressional_district",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column gun_stolen using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "gun_stolen",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column gun_type using expression value.trim()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "gun_type",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column location_description",
+    "columnName": "location_description"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column notes",
+    "columnName": "notes"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column participant_relationship",
+    "columnName": "participant_relationship"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column participant_name",
+    "columnName": "participant_name"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column sources",
+    "columnName": "sources"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column state_house_district using expression value.toString()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "state_house_district",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column state_senate_district using expression value.toString()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "state_senate_district",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column state using expression value.toLowercase()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "state",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column city_or_county using expression value.toLowercase()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "city_or_county",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column state",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "state",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "tennessee",
+          "tennesee"
+        ],
+        "to": "tennessee"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "virginia",
+          "virgina"
+        ],
+        "to": "virginia"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column state",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "state",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "illinois",
+          "illinis"
+        ],
+        "to": "illinois"
+      }
+    ]
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column city_or_county using expression value.replace(\"(county)\",\"county\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "city_or_county",
+    "expression": "value.replace(\"(county)\",\"county\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column city_or_county",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "city_or_county",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "lees summit",
+          "lee's summit",
+          "lees summit (lee's summit)"
+        ],
+        "to": "lee's summit"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "south royalton (royalton)",
+          "south royalton"
+        ],
+        "to": "south royalton"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "charleston (south charleston)",
+          "south charleston"
+        ],
+        "to": "south charleston"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "new smyrna beach",
+          "new smyrna beach (new smyrna)"
+        ],
+        "to": "new smyrna beach"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ventnor city (ventnor)",
+          "ventnor city"
+        ],
+        "to": "ventnor city"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "burlington (burlington township)",
+          "burlington township"
+        ],
+        "to": "burlington township"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "gloucester city",
+          "gloucester city (gloucester)"
+        ],
+        "to": "gloucester city"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "melbourne (west melbourne)",
+          "west melbourne"
+        ],
+        "to": "west melbourne"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "pueblo (pueblo west)",
+          "pueblo west"
+        ],
+        "to": "pueblo west"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "st joseph county",
+          "st. joseph county"
+        ],
+        "to": "st. joseph county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "logan (north logan)",
+          "north logan"
+        ],
+        "to": "north logan"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "lake ronkonkoma",
+          "ronkonkoma (lake ronkonkoma)"
+        ],
+        "to": "lake ronkonkoma"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "marion county",
+          "marion county county"
+        ],
+        "to": "marion county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "alexandria bay",
+          "alexandria bay (alexandria)"
+        ],
+        "to": "alexandria bay"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "lawrence township",
+          "lawrence township (lawrence)"
+        ],
+        "to": "lawrence township"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "diberville",
+          "d'iberville"
+        ],
+        "to": "d'iberville"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "rochester (rochester hills)",
+          "rochester hills"
+        ],
+        "to": "rochester hills"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "muskegon (muskegon heights)",
+          "muskegon heights"
+        ],
+        "to": "muskegon heights"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "smith county",
+          "smith county county"
+        ],
+        "to": "smith county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "wallins creek",
+          "wallins creek (wallins)"
+        ],
+        "to": "wallins creek"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "madison county",
+          "madison county."
+        ],
+        "to": "madison county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "hallandale (hallandale beach)",
+          "hallandale beach"
+        ],
+        "to": "hallandale beach"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "unicoi county",
+          "unicoi county county"
+        ],
+        "to": "unicoi county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "city of industry",
+          "city of industry (city of industry)"
+        ],
+        "to": "city of industry"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "daytona beach (daytona beach shores)",
+          "daytona beach shores"
+        ],
+        "to": "daytona beach shores"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ypsilanti township",
+          "ypsilanti (ypsilanti township)"
+        ],
+        "to": "ypsilanti township"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "baraboo (west baraboo)",
+          "west baraboo"
+        ],
+        "to": "west baraboo"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "los angeles (east los angeles)",
+          "east los angeles"
+        ],
+        "to": "east los angeles"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "humboldt county",
+          "humboldt county county"
+        ],
+        "to": "humboldt county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "lagrange",
+          "lagrange (lagrange)"
+        ],
+        "to": "lagrange"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "barry county",
+          "barry county county"
+        ],
+        "to": "barry county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "huber heights",
+          "huber heights."
+        ],
+        "to": "huber heights"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "drummond island",
+          "drummond island (drummond)"
+        ],
+        "to": "drummond island"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "miami springs",
+          "miami (miami springs)"
+        ],
+        "to": "miami springs"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "saint augustine (saint augustine beach)",
+          "saint augustine beach"
+        ],
+        "to": "saint augustine beach"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "hopewell junction",
+          "hopewell junction (hopewell)"
+        ],
+        "to": "hopewell junction"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "pocomoke city",
+          "pocomoke city (pocomoke)"
+        ],
+        "to": "pocomoke city"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "montgomery county",
+          "montgomery county county"
+        ],
+        "to": "montgomery county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "big bear lake (big bear)",
+          "big bear lake"
+        ],
+        "to": "big bear lake"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "oakland (oakland township)",
+          "oakland township"
+        ],
+        "to": "oakland township"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "land o lakes (land o' lakes)",
+          "land o lakes"
+        ],
+        "to": "land o lakes"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "marlborough (marlboro)",
+          "marlboro (marlborough)"
+        ],
+        "to": "marlborough (marlboro)"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "hilton head island",
+          "hilton head island (hilton head)"
+        ],
+        "to": "hilton head island"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "prince george's county",
+          "prince georges county"
+        ],
+        "to": "prince george's county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "round lake (round lake beach)",
+          "round lake beach"
+        ],
+        "to": "round lake beach"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "san joaquin county",
+          "san joaquin county county"
+        ],
+        "to": "san joaquin county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "lynwood",
+          "lynwood (lynwood)"
+        ],
+        "to": "lynwood"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "washington township",
+          "washington (washington township)"
+        ],
+        "to": "washington township"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "egg harbor city",
+          "egg harbor city (egg harbor)"
+        ],
+        "to": "egg harbor city"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "o fallon (ofallon)",
+          "o fallon (o'fallon)"
+        ],
+        "to": "o'fallon"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "mississippi county",
+          "mississippi county county"
+        ],
+        "to": "mississippi county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "hollis center",
+          "hollis center (hollis)"
+        ],
+        "to": "hollis center"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "helena-west helena",
+          "helena (helena-west helena)"
+        ],
+        "to": "helena-west helena"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "cleveland (east cleveland)",
+          "east cleveland"
+        ],
+        "to": "east cleveland"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "pickens county",
+          "pickens county county"
+        ],
+        "to": "pickens county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "brooklyn park",
+          "brooklyn (brooklyn park)"
+        ],
+        "to": "brooklyn park"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "salt lake city (west valley city)",
+          "salt lake city (west valley)"
+        ],
+        "to": "salt lake city (west valley city)"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "johnson county",
+          "johnson county county"
+        ],
+        "to": "johnson county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "monroe township",
+          "monroe township (monroe)"
+        ],
+        "to": "monroe township"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "manassas (manassas park)",
+          "manassas park"
+        ],
+        "to": "manassas park"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "kootenai county",
+          "kootenai county county"
+        ],
+        "to": "kootenai county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "emmett (emmett township)",
+          "emmett township"
+        ],
+        "to": "emmett township"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "linthicum heights",
+          "linthicum heights (linthicum)"
+        ],
+        "to": "linthicum heights"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "burlington (burlington city)",
+          "burlington city"
+        ],
+        "to": "burlington city"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "hot springs national park (hot springs)",
+          "hot springs national park"
+        ],
+        "to": "hot springs national park"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "dekalb",
+          "dekalb (dekalb)"
+        ],
+        "to": "dekalb"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "falls of rough",
+          "falls of rough (falls of rough)"
+        ],
+        "to": "falls of rough"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "chico",
+          "chico (chico)"
+        ],
+        "to": "chico"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "spokane (spokane valley)",
+          "spokane valley"
+        ],
+        "to": "spokane valley"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "east palo alto",
+          "palo alto (east palo alto)"
+        ],
+        "to": "east palo alto"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "st. petersburg",
+          "st petersburg"
+        ],
+        "to": "st. petersburg"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "colorado springs",
+          "colorado springs (colorado springs)"
+        ],
+        "to": "colorado springs"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "burke county",
+          "burke county county"
+        ],
+        "to": "burke county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "grosse pointe (grosse pointe woods)",
+          "grosse pointe woods"
+        ],
+        "to": "grosse pointe woods"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "riverdale (riverdale park)",
+          "riverdale park"
+        ],
+        "to": "riverdale park"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "richmond (richmond township)",
+          "richmond township"
+        ],
+        "to": "richmond township"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "mcdonough",
+          "mcdonough (mcdonough)"
+        ],
+        "to": "mcdonough"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "merced county",
+          "merced county county"
+        ],
+        "to": "merced county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "south china (china)",
+          "south china"
+        ],
+        "to": "south china"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "gardiner (west gardiner)",
+          "west gardiner"
+        ],
+        "to": "west gardiner"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "farmington (farmington hills)",
+          "farmington hills"
+        ],
+        "to": "farmington hills"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "miami (north miami)",
+          "north miami"
+        ],
+        "to": "north miami"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "jefferson county",
+          "jefferson county."
+        ],
+        "to": "jefferson county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "bedford heights",
+          "bedford (bedford heights)"
+        ],
+        "to": "bedford heights"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "harrison township",
+          "harrison (harrison township)"
+        ],
+        "to": "harrison township"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "kansas city (north kansas city)",
+          "north kansas city"
+        ],
+        "to": "north kansas city"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "dania beach",
+          "dania (dania beach)"
+        ],
+        "to": "dania beach"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "plainfield (north plainfield)",
+          "north plainfield"
+        ],
+        "to": "north plainfield"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "cleveland (cleveland heights)",
+          "cleveland heights"
+        ],
+        "to": "cleveland heights"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "litchfield park",
+          "litchfield park (litchfield)"
+        ],
+        "to": "litchfield park"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "baltimore",
+          "baltimore (baltimore)"
+        ],
+        "to": "baltimore"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "mccomb",
+          "mccomb (mccomb)"
+        ],
+        "to": "mccomb"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "willoughby (willoughby hills)",
+          "willoughby hills"
+        ],
+        "to": "willoughby hills"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "macomb (macomb township)",
+          "macomb township"
+        ],
+        "to": "macomb township"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "miami (miami shores)",
+          "miami shores"
+        ],
+        "to": "miami shores"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column city_or_county",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "city_or_county",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "south point",
+          "point south"
+        ],
+        "to": "south point"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column city_or_county",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "city_or_county",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "kailua kona",
+          "kailua kona (kailua-kona)",
+          "kailua-kona"
+        ],
+        "to": "kailua kona"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "mcfarland",
+          "mc farland"
+        ],
+        "to": "mcfarland"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "state line",
+          "stateline"
+        ],
+        "to": "stateline"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "le roy",
+          "leroy"
+        ],
+        "to": "le roy"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "laplace",
+          "la place"
+        ],
+        "to": "la place"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "whitehall",
+          "white hall"
+        ],
+        "to": "white hall"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "rising sun",
+          "risingsun"
+        ],
+        "to": "rising sun"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "spring hill",
+          "springhill"
+        ],
+        "to": "spring hill"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "east point",
+          "eastpoint"
+        ],
+        "to": "east point"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "wilkes barre",
+          "wilkes-barre"
+        ],
+        "to": "wilkes barre"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "charlestown",
+          "charles town"
+        ],
+        "to": "charles town"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "lagrange",
+          "la grange"
+        ],
+        "to": "la grange"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "opa locka",
+          "opa-locka"
+        ],
+        "to": "opa locka"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "lafayette",
+          "la fayette"
+        ],
+        "to": "la fayette"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "south gate",
+          "southgate"
+        ],
+        "to": "south gate"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "fair lawn",
+          "fairlawn"
+        ],
+        "to": "fair lawn"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "soddy daisy",
+          "soddy-daisy"
+        ],
+        "to": "soddy daisy"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "mill creek",
+          "millcreek"
+        ],
+        "to": "mill creek"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "forest hill",
+          "foresthill"
+        ],
+        "to": "forest hill"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "big spring",
+          "big springs"
+        ],
+        "to": "big spring"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "dewitt",
+          "de witt"
+        ],
+        "to": "de witt"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "clearlake",
+          "clear lake"
+        ],
+        "to": "clear lake"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "larose",
+          "la rose"
+        ],
+        "to": "la rose"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "north shore",
+          "northshore"
+        ],
+        "to": "north shore"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "rose bud",
+          "rosebud"
+        ],
+        "to": "rose bud"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "lakeview",
+          "lake view"
+        ],
+        "to": "lake view"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "oak ridge",
+          "oakridge"
+        ],
+        "to": "oak ridge"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "long branch",
+          "longbranch"
+        ],
+        "to": "long branch"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "el dorado",
+          "eldorado"
+        ],
+        "to": "el dorado"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "o fallon",
+          "o'fallon"
+        ],
+        "to": "o'fallon"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "mc donald",
+          "mcdonald"
+        ],
+        "to": "mc donald"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "new bern",
+          "newbern"
+        ],
+        "to": "new bern"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "winston-salem",
+          "winston salem"
+        ],
+        "to": "winston salem"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "leflore county",
+          "le flore county"
+        ],
+        "to": "le flore county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "la follette",
+          "lafollette"
+        ],
+        "to": "la follette"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "pinetop",
+          "pine top"
+        ],
+        "to": "pine top"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "desoto county",
+          "de soto county"
+        ],
+        "to": "desoto county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "la pine",
+          "lapine"
+        ],
+        "to": "la pine"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "bay shore",
+          "bayshore"
+        ],
+        "to": "bay shore"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "cedar bluff",
+          "cedarbluff"
+        ],
+        "to": "cedar bluff"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "west chester",
+          "westchester"
+        ],
+        "to": "west chester"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "dry fork",
+          "dryfork"
+        ],
+        "to": "dry fork"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "pine brook",
+          "pinebrook"
+        ],
+        "to": "pine brook"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "red lake",
+          "redlake"
+        ],
+        "to": "red lake"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "la porte",
+          "laporte"
+        ],
+        "to": "la porte"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "laporte county",
+          "la porte county"
+        ],
+        "to": "laporte county"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "north port",
+          "northport"
+        ],
+        "to": "north port"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "forest lake",
+          "forest lakes"
+        ],
+        "to": "forest lake"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "coeur d'alene",
+          "coeur d alene"
+        ],
+        "to": "coeur d'alene"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "newmarket",
+          "new market"
+        ],
+        "to": "new market"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "delmar",
+          "del mar"
+        ],
+        "to": "del mar"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "denver (northglenn)",
+          "denver (north glenn)"
+        ],
+        "to": "denver (north glenn)"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "mccomb",
+          "mc comb"
+        ],
+        "to": "mc comb"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "rock springs",
+          "rocksprings"
+        ],
+        "to": "rock springs"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "mc calla",
+          "mccalla"
+        ],
+        "to": "mc calla"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "crown point",
+          "crownpoint"
+        ],
+        "to": "crown point"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "winter haven",
+          "winterhaven"
+        ],
+        "to": "winter haven"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "glenrock",
+          "glen rock"
+        ],
+        "to": "glen rock"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "mc dowell",
+          "mcdowell"
+        ],
+        "to": "mc dowell"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "doerun",
+          "doe run"
+        ],
+        "to": "doe run"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "russellville",
+          "russelville"
+        ],
+        "to": "russellville"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "marrero",
+          "marrrero"
+        ],
+        "to": "marrero"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "east hampton",
+          "easthampton"
+        ],
+        "to": "east hampton"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "beaver dam",
+          "beaverdam"
+        ],
+        "to": "beaver dam"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "little rock",
+          "littlerock"
+        ],
+        "to": "little rock"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "wolf creek (sunnyvalley)",
+          "wolf creek (sunny valley)"
+        ],
+        "to": "wolf creek (sunny valley)"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "fort mc coy",
+          "fort mccoy"
+        ],
+        "to": "fort mc coy"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "mc cormick",
+          "mccormick"
+        ],
+        "to": "mc cormick"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "fair haven",
+          "fairhaven"
+        ],
+        "to": "fair haven"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "desoto",
+          "de soto"
+        ],
+        "to": "de soto"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "cherry hill township",
+          "cherryhill township"
+        ],
+        "to": "cherryhill township"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "white house",
+          "whitehouse"
+        ],
+        "to": "white house"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "newtown",
+          "new town"
+        ],
+        "to": "new town"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "mckenzie",
+          "mc kenzie"
+        ],
+        "to": "mckenzie"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "new castle",
+          "newcastle"
+        ],
+        "to": "new castle"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "mc kee",
+          "mckee"
+        ],
+        "to": "mc kee"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "la mesa",
+          "lamesa"
+        ],
+        "to": "la mesa"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "dekalb",
+          "de kalb"
+        ],
+        "to": "de kalb"
+      }
+    ]
+  }
+]

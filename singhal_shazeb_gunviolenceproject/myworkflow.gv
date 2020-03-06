@@ -1,0 +1,217 @@
+
+/* Start of top-level graph */
+digraph Workflow {
+rankdir=TB
+
+/* Title for graph */
+fontname=Helvetica; fontsize=18; labelloc=t
+label=Parallel_OR
+
+/* Start of double cluster for drawing box around nodes in workflow */
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; penwidth=0
+
+/* Style for nodes representing atomic programs in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing atomic programs in workflow */
+"core/text-transform0" [shape=record rankdir=LR label="{<f0> core/text-transform0 |<f1> Text transform on cells in column incident_id using expression value.toString()}"];
+"core/text-transform1" [shape=record rankdir=LR label="{<f0> core/text-transform1 |<f1> Text transform on cells in column state using expression value.trim()}"];
+"core/text-transform2" [shape=record rankdir=LR label="{<f0> core/text-transform2 |<f1> Text transform on cells in column city_or_county using expression value.trim()}"];
+"core/column-removal3" [shape=record rankdir=LR label="{<f0> core/column-removal3 |<f1> Remove column address}"];
+"core/text-transform4" [shape=record rankdir=LR label="{<f0> core/text-transform4 |<f1> Text transform on cells in column n_killed using expression value.toNumber()}"];
+"core/text-transform5" [shape=record rankdir=LR label="{<f0> core/text-transform5 |<f1> Text transform on cells in column n_injured using expression value.toNumber()}"];
+"core/column-removal6" [shape=record rankdir=LR label="{<f0> core/column-removal6 |<f1> Remove column incident_url}"];
+"core/column-removal7" [shape=record rankdir=LR label="{<f0> core/column-removal7 |<f1> Remove column source_url}"];
+"core/column-removal8" [shape=record rankdir=LR label="{<f0> core/column-removal8 |<f1> Remove column incident_url_fields_missing}"];
+"core/text-transform9" [shape=record rankdir=LR label="{<f0> core/text-transform9 |<f1> Text transform on cells in column congressional_district using expression value.toString()}"];
+"core/text-transform10" [shape=record rankdir=LR label="{<f0> core/text-transform10 |<f1> Text transform on cells in column gun_stolen using expression value.trim()}"];
+"core/text-transform11" [shape=record rankdir=LR label="{<f0> core/text-transform11 |<f1> Text transform on cells in column gun_type using expression value.trim()}"];
+"core/column-removal12" [shape=record rankdir=LR label="{<f0> core/column-removal12 |<f1> Remove column location_description}"];
+"core/column-removal13" [shape=record rankdir=LR label="{<f0> core/column-removal13 |<f1> Remove column notes}"];
+"core/column-removal14" [shape=record rankdir=LR label="{<f0> core/column-removal14 |<f1> Remove column participant_relationship}"];
+"core/column-removal15" [shape=record rankdir=LR label="{<f0> core/column-removal15 |<f1> Remove column participant_name}"];
+"core/column-removal16" [shape=record rankdir=LR label="{<f0> core/column-removal16 |<f1> Remove column sources}"];
+"core/text-transform17" [shape=record rankdir=LR label="{<f0> core/text-transform17 |<f1> Text transform on cells in column state_house_district using expression value.toString()}"];
+"core/text-transform18" [shape=record rankdir=LR label="{<f0> core/text-transform18 |<f1> Text transform on cells in column state_senate_district using expression value.toString()}"];
+"core/text-transform19" [shape=record rankdir=LR label="{<f0> core/text-transform19 |<f1> Text transform on cells in column state using expression value.toLowercase()}"];
+"core/text-transform20" [shape=record rankdir=LR label="{<f0> core/text-transform20 |<f1> Text transform on cells in column city_or_county using expression value.toLowercase()}"];
+"core/mass-edit21" [shape=record rankdir=LR label="{<f0> core/mass-edit21 |<f1> Mass edit cells in column state}"];
+"core/mass-edit22" [shape=record rankdir=LR label="{<f0> core/mass-edit22 |<f1> Mass edit cells in column state}"];
+"core/text-transform23" [shape=record rankdir=LR label="{<f0> core/text-transform23 |<f1> Text transform on cells in column city_or_county using expression value.replace(\"(county)\",\"county\")}"];
+"core/mass-edit24" [shape=record rankdir=LR label="{<f0> core/mass-edit24 |<f1> Mass edit cells in column city_or_county}"];
+"core/mass-edit25" [shape=record rankdir=LR label="{<f0> core/mass-edit25 |<f1> Mass edit cells in column city_or_county}"];
+"core/mass-edit26" [shape=record rankdir=LR label="{<f0> core/mass-edit26 |<f1> Mass edit cells in column city_or_county}"];
+CombineDataCleaningChanges
+
+/* Style for nodes representing non-parameter data channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes for non-parameter data channels in workflow */
+CleanData
+incident_id
+state
+city_or_county
+address
+n_killed
+n_injured
+incident_url
+source_url
+incident_url_fields_missing
+congressional_district
+gun_stolen
+gun_type
+location_description
+notes
+participant_relationship
+participant_name
+sources
+state_house_district
+state_senate_district
+state_1
+city_or_county_1
+state_2
+state_3
+city_or_county_2
+city_or_county_3
+city_or_county_4
+city_or_county_5
+incident_id_1
+state_4
+city_or_county_6
+"remove-address"
+n_killed_1
+n_injured_1
+"remove-incident_url"
+"remove-source_url"
+"remove-incident_url_fields_missing"
+congressional_district_1
+gun_stolen_1
+gun_type_1
+"remove-location_description"
+"remove-notes"
+"remove-participant_relationship"
+"remove-participant_name"
+"remove-sources"
+state_house_district_1
+state_senate_district_1
+
+/* Style for nodes representing parameter channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing parameter channels in workflow */
+"expression:value.toString()"
+"expression:value.trim()"
+"expression:value.toNumber()"
+"expression:value.toLowercase()"
+"expression:value"
+"expression:value.replace(\"(county)\",\"county\")"
+
+/* Edges representing connections between programs and channels */
+"core/text-transform0" -> incident_id_1
+"expression:value.toString()" -> "core/text-transform0"
+incident_id -> "core/text-transform0"
+"core/text-transform1" -> state_1
+"expression:value.trim()" -> "core/text-transform1"
+state -> "core/text-transform1"
+"core/text-transform2" -> city_or_county_1
+"expression:value.trim()" -> "core/text-transform2"
+city_or_county -> "core/text-transform2"
+"core/column-removal3" -> "remove-address"
+address -> "core/column-removal3"
+"core/text-transform4" -> n_killed_1
+"expression:value.toNumber()" -> "core/text-transform4"
+n_killed -> "core/text-transform4"
+"core/text-transform5" -> n_injured_1
+"expression:value.toNumber()" -> "core/text-transform5"
+n_injured -> "core/text-transform5"
+"core/column-removal6" -> "remove-incident_url"
+incident_url -> "core/column-removal6"
+"core/column-removal7" -> "remove-source_url"
+source_url -> "core/column-removal7"
+"core/column-removal8" -> "remove-incident_url_fields_missing"
+incident_url_fields_missing -> "core/column-removal8"
+"core/text-transform9" -> congressional_district_1
+"expression:value.toString()" -> "core/text-transform9"
+congressional_district -> "core/text-transform9"
+"core/text-transform10" -> gun_stolen_1
+"expression:value.trim()" -> "core/text-transform10"
+gun_stolen -> "core/text-transform10"
+"core/text-transform11" -> gun_type_1
+"expression:value.trim()" -> "core/text-transform11"
+gun_type -> "core/text-transform11"
+"core/column-removal12" -> "remove-location_description"
+location_description -> "core/column-removal12"
+"core/column-removal13" -> "remove-notes"
+notes -> "core/column-removal13"
+"core/column-removal14" -> "remove-participant_relationship"
+participant_relationship -> "core/column-removal14"
+"core/column-removal15" -> "remove-participant_name"
+participant_name -> "core/column-removal15"
+"core/column-removal16" -> "remove-sources"
+sources -> "core/column-removal16"
+"core/text-transform17" -> state_house_district_1
+"expression:value.toString()" -> "core/text-transform17"
+state_house_district -> "core/text-transform17"
+"core/text-transform18" -> state_senate_district_1
+"expression:value.toString()" -> "core/text-transform18"
+state_senate_district -> "core/text-transform18"
+"core/text-transform19" -> state_2
+"expression:value.toLowercase()" -> "core/text-transform19"
+state_1 -> "core/text-transform19"
+"core/text-transform20" -> city_or_county_2
+"expression:value.toLowercase()" -> "core/text-transform20"
+city_or_county_1 -> "core/text-transform20"
+"core/mass-edit21" -> state_3
+"expression:value" -> "core/mass-edit21"
+state_2 -> "core/mass-edit21"
+"core/mass-edit22" -> state_4
+"expression:value" -> "core/mass-edit22"
+state_3 -> "core/mass-edit22"
+"core/text-transform23" -> city_or_county_3
+"expression:value.replace(\"(county)\",\"county\")" -> "core/text-transform23"
+city_or_county_2 -> "core/text-transform23"
+"core/mass-edit24" -> city_or_county_4
+"expression:value" -> "core/mass-edit24"
+city_or_county_3 -> "core/mass-edit24"
+"core/mass-edit25" -> city_or_county_5
+"expression:value" -> "core/mass-edit25"
+city_or_county_4 -> "core/mass-edit25"
+"core/mass-edit26" -> city_or_county_6
+"expression:value" -> "core/mass-edit26"
+city_or_county_5 -> "core/mass-edit26"
+CombineDataCleaningChanges -> CleanData
+incident_id_1 -> CombineDataCleaningChanges
+state_4 -> CombineDataCleaningChanges
+city_or_county_6 -> CombineDataCleaningChanges
+address -> CombineDataCleaningChanges
+"remove-address" -> CombineDataCleaningChanges
+n_killed_1 -> CombineDataCleaningChanges
+n_injured_1 -> CombineDataCleaningChanges
+incident_url -> CombineDataCleaningChanges
+"remove-incident_url" -> CombineDataCleaningChanges
+source_url -> CombineDataCleaningChanges
+"remove-source_url" -> CombineDataCleaningChanges
+incident_url_fields_missing -> CombineDataCleaningChanges
+"remove-incident_url_fields_missing" -> CombineDataCleaningChanges
+congressional_district_1 -> CombineDataCleaningChanges
+gun_stolen_1 -> CombineDataCleaningChanges
+gun_type_1 -> CombineDataCleaningChanges
+location_description -> CombineDataCleaningChanges
+"remove-location_description" -> CombineDataCleaningChanges
+notes -> CombineDataCleaningChanges
+"remove-notes" -> CombineDataCleaningChanges
+participant_relationship -> CombineDataCleaningChanges
+"remove-participant_relationship" -> CombineDataCleaningChanges
+participant_name -> CombineDataCleaningChanges
+"remove-participant_name" -> CombineDataCleaningChanges
+sources -> CombineDataCleaningChanges
+"remove-sources" -> CombineDataCleaningChanges
+state_house_district_1 -> CombineDataCleaningChanges
+state_senate_district_1 -> CombineDataCleaningChanges
+
+/* End of double cluster for drawing box around nodes in workflow */
+}}
+
+/* End of top-level graph */
+}
